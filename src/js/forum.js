@@ -1,7 +1,7 @@
 import ky from "ky";
 
 function getMessageView(message) {
-  return `<div>
+  return `<div class="card-my3>
     <p>${message.username}<p/>
     <p>${message.message}</p>
   </div>`;
@@ -10,6 +10,7 @@ function getMessageView(message) {
 function displayMessages(messages) {
   // Clear list content on view
   // Iterate on messages and display getMessageView(message);
+  const $messageContainer = $(".messages-container");
 }
 
 async function refreshMessages() {
@@ -22,7 +23,7 @@ setInterval(() => {
   refreshMessages();
 }, 1000);
 
-function sendMessage(message) {
-  // POST https://ensmn.herokuapp.com/messages (username, message)
-  // After success, getMessages()
-}
+// function sendMessage(message) {
+//   // POST https://ensmn.herokuapp.com/messages (username, message)
+//   // After success, getMessages()
+// }

@@ -22,3 +22,23 @@ a.special {
 
   display: block; /*hidden, inline, ...*/
 }
+
+label {
+  color: blue; /*rgb(, , , )*/
+}
+
+input[type = "text"]{
+  font-size: 24px;
+}
+
+.email-container{
+  position: relative;
+
+}
+.email-tooltip{
+  position: right;
+  right: 0; 
+  top: 0;
+  font-size:24px;
+  color: red;
+}
