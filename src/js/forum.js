@@ -1,9 +1,15 @@
 import ky from "ky";
+import $ from "jquery";
 
 function getMessageView(message) {
   return `<div class="card-my3>
+  <div class="card-body">
+    <p class = "card-text">${message.content}</p>
+  </div>
+  <div class="card-footer text-muted text-right">
     <p>${message.username}<p/>
     <p>${message.message}</p>
+  </div>
   </div>`;
 }
 
@@ -19,9 +25,10 @@ async function refreshMessages() {
   displayMessages(messages);
 }
 
-setInterval(() => {
-  refreshMessages();
-}, 1000);
+resfreshMessages();
+// setInterval(() => {
+//   refreshMessages();
+// }, 1000);
 
 // function sendMessage(message) {
 //   // POST https://ensmn.herokuapp.com/messages (username, message)
